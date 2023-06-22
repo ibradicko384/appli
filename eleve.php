@@ -1,35 +1,32 @@
 <?php
-// Inclusion du fichier de connexion à la base de données
-include '../connec.php';
-// indes.php
-include '../fonction1.php';
+include 'connexion.php';
 $getEleve= getEleve();
 ?>
 
 
-
-
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../boostgetbootstrap.com_docs_5.3_assets_js_color-modes.js"></script>
-
+<head>
+    <script src="../boostgetbootstrap.com_docs_5.3_assets_js_color-modes.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.112.5">
     <script src="../boost/bootstrap.min.js"></script>
-    <title>Dashboard Template · Bootstrap v5.3</title>
-
+    <title>Bootstrap v5.3</title>
 <link href="../boost/getbootstrap.com_docs_5.3_dist_css_bootstrap.min.css" rel="stylesheet" >
-
-    <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<link href="DataTables/datatables.min.css" rel="stylesheet"/>
+
+
 <meta name="theme-color" content="#712cf9">
 
 
@@ -217,8 +214,7 @@ $getEleve= getEleve();
         <h1 class="h2">Fonction admin</h1>
 
 
-        <?php
-
+<?php
 if (isset($_GET['ajoute']) && ($_GET['ajoute']) == 'ok'){
   echo "
   <div class='alert alert-success'>
@@ -228,12 +224,11 @@ if (isset($_GET['ajoute']) && ($_GET['ajoute']) == 'ok'){
 }
 ?>
   
-        <!-- Button trigger modal -->
+
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 Ajouter
 </button>
 
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -258,7 +253,7 @@ Ajouter
             </div>
 
             <div class="form-group  mt-3">
-                <input type="date" name="date_naissance"  class="form-control" placeholder="dat de naissance " required>
+                <input type="date" name="date_de_naissance"  class="form-control" placeholder="date de naissance " required>
             </div>
 
 
@@ -270,12 +265,11 @@ Ajouter
     </div>
   </div>
 </div>
-
-
-
-
 </div>
-      <table class="table">
+     
+
+
+<table class="table" id=exemple>
   <thead >
     <tr>
       <th scope="col">N</th>
@@ -286,8 +280,6 @@ Ajouter
     </tr>
   </thead>
   <tbody>
-
-<!-- Button trigger modal -->
 <?php
 $i = 0;
 foreach ($getEleve as $e) {
@@ -304,14 +296,15 @@ foreach ($getEleve as $e) {
 }
 ?>
 
-  </tbody>
-</table>
+       </tbody>
+       </table>
+       <script type="text/javascript">
+        $("#exemple").dataTable({
+
+        });
+
+       </script>
       </div>
-
-      
-
-     
-
     </main>
   </div>
 </div>
@@ -319,11 +312,11 @@ foreach ($getEleve as $e) {
 <?php
   include '../footer.php';
 ?>
-<script src="../boost/getbootstrap.com_docs_5.3_dist_js_bootstrap.bundle.min.j" ></script>
-
+    <script src="../boost/getbootstrap.com_docs_5.3_dist_js_bootstrap.bundle.min.j" ></script>
     <script src="../boost/cdn.jsdelivr.net_npm_chart.js@4.2.1_dist_chart.umd.min.js">
-
     </script><script src="../boost/getbootstrap.com_docs_5.3_examples_dashboard_dashboard.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
     
   </body>
 </html>

@@ -7,7 +7,7 @@ if (isset($_POST['administrer'])) {
     $email = $_POST['email'];
     $mot_de_passe = $_POST['mot_de_passe'];
 
-    $query = "INSERT INTO admini (nom, prenom, email, mot_de_passe) VALUES (:nom, :prenom, :email, :mot_de_passe)";
+    $query = "INSERT INTO parent (nom, prenom, email, mot_de_passe) VALUES (:nom, :prenom, :email, :mot_de_passe)";
     $query_run = $conn->prepare($query);
     $query_run->bindParam(':nom', $nom);
     $query_run->bindParam(':prenom', $prenom);
@@ -16,7 +16,7 @@ if (isset($_POST['administrer'])) {
 
     if ($query_run->execute()) {
         echo $msg_success = "Vos données ont été bien enregistrées!";
-        header('Location: admini.php');
+        header('Location: inspapa.php');
         exit;
     } else {
         $msg = "Erreur d'enregistrement";
@@ -35,15 +35,13 @@ if (isset($_POST['administrer'])) {
     <link href="boost/getbootstrap.com_docs_5.3_dist_css_bootstrap.min.css" rel="stylesheet">
     <link href="boost/cdn.jsdelivr.net_npm_bootstrap-icons@1.10.3_font_bootstrap-icons.css" rel="stylesheet">
     <style>
-          body{
-            background-color: lavenderblush;
-        }
+        /* ... styles ... */
     </style>
     <script src="boost/getbootstrap.com_docs_5.3_assets_js_color-modes.js"></script>
 </head>
 <body>
 <form class="form" style="margin: 50px;" action="" method="POST">
-    <h1 class="text-center">Inscrire une secrétaire</h1>
+    <h1 class="text-center">Inscrire un parent</h1>
     <div class="form-floating mt-3">
         <input type="text" class="form-control" name="nom" id="floatingInput" placeholder="Nom" required>
         <label for="floatingInput">Nom</label>
@@ -62,7 +60,14 @@ if (isset($_POST['administrer'])) {
     </div>
     <button class="w-100 btn btn-lg btn-primary mt-3" type="submit" name="administrer">Inscrire</button>
 </form>
-<p><button type="button" class="btn btn-nfo"><a class="abc"  href="admin.php">Retour à l'accueil</a></button></p>
+<div class="container">
+<p><button type="button" class="btn btn-nfo"><a class="abc"  href="listepapa.php">Retour à l'accueil</a></button></p>
+<?php
+  include 'footer.php';
+?>
+</div>
+
+
 <script src="boost/cdn.jsdelivr.net_npm_chart.js@4.2.1_dist_chart.umd.min.js"></script>
 <script src="boost/getbootstrap.com_docs_5.3_examples_dashboard_dashboard.js"></script>
 </body>

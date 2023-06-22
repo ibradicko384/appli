@@ -5,7 +5,7 @@ if (isset($_POST['connecter'])) {
     $email_saisi = htmlspecialchars($_POST['email']);
     $mot_de_passe_saisi = htmlspecialchars($_POST['mot_de_passe']);
 
-    $sql = "SELECT email, mot_de_passe FROM admini WHERE email = :email";
+    $sql = "SELECT email, mot_de_passe FROM parent WHERE email = :email";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':email', $email_saisi);
     $stmt->execute();
@@ -17,7 +17,7 @@ if (isset($_POST['connecter'])) {
 
         
         if (password_verify($mot_de_passe_saisi, $mot_de_passe_defaut)) {
-            header('Location: accueil.php');
+            header('Location: admin.php');
             exit;
         } else {
             echo '<h6 class="text-danger">Votre mot de passe est incorrect!</h6>';

@@ -22,8 +22,12 @@
     <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#712cf9">
     
-    <!-- Custom styles for this template -->
     <link href="navbar-static.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: lightslategray;
+        }
+    </style>
   </head>
   <body>
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
@@ -68,11 +72,8 @@
         <a class="nav-link active" aria-current="page" href="#">Accueil</a>
        </li>
        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">L'année</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">L'année scolaire</a>
         <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">2020</a></li>
-      <li><a class="dropdown-item" href="#">2021</a></li>
-      <li><a class="dropdown-item" href="#">2022</a></li>
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#">2023</a></li>
     </ul>
@@ -83,7 +84,6 @@
   <li class="nav-item">
     <a class="nav-link" href="#">Partenaires</a>
   </li>
-  
   </ul>
   <form class="d-flex" role="search">
         <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -93,14 +93,12 @@
       </div>
     </div>
   </div>
-  
-
 <main class="container">
 <div class="bg-body-tertiary p-5 rounded">
     <div class="row mt-5">
       <div class="col-3 bg-black">
       <img src="images\Users_icon-icons.com_74706.png">
-      <p><button type="button" class="btn bg-success mt-2"><a class="malf"  href="#">Vérification de la moyenne</a></button></p>
+      <p><button type="button" class="btn bg-success mt-2"><a class="malf"  href="consulmoyen.php">Vérification de la moyenne</a></button></p>
       </div>
 
       <div class="col-3 bg-black offset-1">
@@ -117,13 +115,14 @@
 </main>
 <div class="container">
   <div class="row">
-  <div class="bg-black text-center p-4 mt-4">
+  <div class="bg-black text-center p-5 mt-4">
   <p class="text-white">
     Tous les droits sont reservés 2023
   </p>
 </div>
 
   </div>
+  <p><button type="button" class="btn btn-nfo"><a class="abc"  href="accueil.php">Retour à l'accueil</a></button></p>
 </div>
 
 

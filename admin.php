@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head><script src="boostgetbootstrap.com_docs_5.3_assets_js_color-modes.js"></script>
+  
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,88 +19,20 @@
 <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style1.css">
 <meta name="theme-color" content="#712cf9">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-    </style>
 
     
     <!-- Custom styles for this template -->
     <link href="boost/cdn.jsdelivr.net_npm_bootstrap-icons@1.10.3_font_bootstrap-icons.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="boost/getbootstrap.com_docs_5.3_examples_dashboard_dashboard.css" rel="stylesheet">
+    <style>
+       body{
+            background-color: lavenderblush;
+        }
+    </style>
   </head>
   <body> 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -165,105 +98,85 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto ">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link d-flex  align-items-center gap-2 text-dark " aria-current="page" href="indes.php">
+              <a class="nav-link d-flex  align-items-center gap-2 text-dark " aria-current="page" href="affichadmin.php">
                 <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                Admin
+                Compte admin adjoint
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex active align-items-center gap-2 text-dark" href="../catego/liste.php">
-                <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                 classe
+              <a class="nav-link d-flex align-items-center gap-2 text-dark" href="listepapa.php">
+                <svg class="bi"><use xlink:href="#people"/></svg>
+                Compte parent
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 text-dark" href="#">
-                <svg class="bi"><use xlink:href="#cart"/></svg>
-                Parent
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 text-dark" href="../visiteur/listevi.php">
+              <a class="nav-link d-flex align-items-center gap-2 text-dark" href="moyenne.php">
                 <svg class="bi"><use xlink:href="#people"/></svg>
                 Moyenne
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../stok/listestok.php">
+              <a class="nav-link d-flex align-items-center gap-2" href="listelev.php">
                 <svg class="bi"><use xlink:href="indes.php"/></svg>
-                Elève
+                Compte élève
               </a>
             </li>
-          </ul>
+           </ul>
           <hr class="my-3">
         </div>
       </div>
     </div>
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-   
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Liste des élèves ajoutés par l'admin </h1>
-         <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Ajouter</a>
-      </div>
-      <table class="table">
-  <thead >
-    <tr>
-      <th scope="col">N</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Prénom</th>
-      <th scope="col">Date de naissance</th>
-      <th scope="col">Classe</th>
-      <th scope="col">Moyenne</th>
-    </tr>
-  </thead>
-  <tbody>  
-  </tbody>
-</table>
+    <div class="col">
+      <h1><img class="moo" src="images\deux (1).png" alt=""></h1>
 
-<!-- Button trigger modal -->
+    </div>
+    <div class="col">
+      <h1><img class="moo" src="images\deux (2).png" alt=""></h1>
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Enregistrer un élève</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-         <form action="ajoueter.php" method="post">
-            <div class="form-group">
-                <input type="text" name="nom" class="form-control" placeholder="nom">
-            </div><br>
-            <div class="form-group">
-                <input type="text" name="prenom" class="form-control" placeholder="prenom">
-            </div><br>
-            <div class="form-group">
-                <input type="date" name="date" class="form-control" placeholder="Date de Naisance">
-            </div><br>
-            <div class="form-group">
-                <input type="text" name="classe" class="form-control" placeholder="Classe">
-            </div><br>
-            
-
-
-            
-            <div class="form-group">
-                <input type="text" name="moyenne" class="form-control" placeholder="moyenne">
-            </div>
-          
-        
-             <div class="modal-footer">
-             <button type="submit" class="btn btn-primary">Enregistrer</button>
-            </div>
-      </form>
+    </div>
+    <div class="col">
+      <h1><img class="moo" src="images\deux (3).png" alt=""></h1>
     </div>
   </div>
 </div>
-</main>
-</div>
-</div>
-
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+      <p><button type="button" class="btn btn-nfo"><a class="abc"  href="accueil.php">Retour à l'accueil</a></button></p>
+    </div>
+<?php
+  include 'footer.php';
+?>
 <script src="boost/getbootstrap.com_docs_5.3_dist_js_bootstrap.bundle.min.j" ></script>
 
     <script src="boost/cdn.jsdelivr.net_npm_chart.js@4.2.1_dist_chart.umd.min.js">

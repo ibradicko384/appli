@@ -179,13 +179,7 @@
             <li class="nav-item">
               <a class="nav-link d-flex  align-items-center gap-2 text-dark" aria-current="page" href="inscripsec.php">
                 <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                Administrateur
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex active align-items-center gap-2 text-dark" href="classe.php">
-                <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                 classe
+                Ajout admin
               </a>
             </li>
             <li class="nav-item">

@@ -1,5 +1,5 @@
 <<?php
-    include '../connec.php';
+    include 'connexion.php';
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $classe = $_POST['classe'];
